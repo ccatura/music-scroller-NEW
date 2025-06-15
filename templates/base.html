@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+    <title>My Simple Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    {% block script %}{% endblock %}
+</head>
+<body>
+
+    <div class="outermost-container">
+
+        {% if section == "scroller" %}
+            <div class="navbar-container">{% include 'navbar_scroll.html' %}</div>
+        {% else %}
+            <div class="navbar-container">{% include 'navbar.html' %}</div>
+        {% endif %}
+
+        {% block content %}{% endblock %}
+    </div>
+
+</body>
+</html>

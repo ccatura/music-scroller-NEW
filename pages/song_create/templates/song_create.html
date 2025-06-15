@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ title or "User Create" }}</h1>
+<p>Just some extra information.</p>
+<form action="{{ url_for('song_create_commit.song_create_commit') }}" method="post">
+    <div>
+        Name<br>
+        <input type="text" name="title" placeholder="Enter title">
+    </div>
+    <div>
+        Subtitle<br>
+        <input type="text" name="subtitle" placeholder="Enter subtitle">
+    </div>
+    <div>
+        Artist<br>
+        <input type="text" name="artist" placeholder="Enter artist">
+    </div>
+    <div>
+        Album<br>
+        <input type="text" name="album" placeholder="Enter album">
+    </div>
+    <div>
+        Genre<br>
+        <input type="text" name="genre" placeholder="Enter genre">
+    </div>
+    <div>
+        Year<br>
+        <input type="text" name="year" placeholder="Enter year">
+    </div>
+        <div>
+        Lyrics<br>
+        <textarea name="lyrics" placeholder="Enter lyrics"></textarea>
+    </div>
+    <div>
+        ID = {{ temp_user_id }}<br>
+        <input type="hidden" name="owner_id" value="{{ temp_user_id }}">
+    </div>
+
+    <div>
+        <input type="submit" value="Create Song">
+    </div>
+</form>
+{% endblock %}

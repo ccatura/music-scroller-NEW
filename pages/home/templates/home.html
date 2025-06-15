@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ title or "Home Page" }}</h1>
+<p><a href="{{ url_for('user.user') }}">Edit User</a></p>
+<p><a href="{{ url_for('user_create.user_create') }}">Create User</a></p>
+<p><a href="/">Login As Charlie</a></p>
+{% endblock %}

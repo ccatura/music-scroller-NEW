@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ title or "User Create" }}</h1>
+<p>You did it!</p>
+<p>User: {{ username }}</p>
+<p>Email: {{ email }}</p>
+<p>Password: {{ password }}</p>
+<p>Created: {{ created_at }}</p>
+<p>Updated: {{ updated_at }}</p>
+
+
+
+{% endblock %}

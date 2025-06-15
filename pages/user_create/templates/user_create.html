@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ title or "User Create" }}</h1>
+<p>Just some extra information.</p>
+<form action="/user_create_commit" method="post">
+    <div>
+        Name<br>
+        <input type="text" name="username" placeholder="Enter username">
+    </div>
+    <div>
+        Email<br>
+        <input type="text" name="email" placeholder="Enter email">
+    </div>
+    <div>
+        Password<br>
+        <input type="password" name="password" placeholder="Enter password">
+    </div>
+    <div>
+        <input type="submit" value="Create User">
+    </div>
+</form>
+{% endblock %}

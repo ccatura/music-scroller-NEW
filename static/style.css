@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --side-padding: 1em;
+    --top-bottom-padding: 1em;
+    --menu-color: #454545;
+    --border-color-one: #808080;
+    --font-color-dark: black;
+    --background-color-content: #222;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: monospace, 'Courier New', Courier;
+    background-color: var(--background-color-content);
+    color: #eee;
+    overflow-x: hidden;
+}
+
+a {
+    color: #eee;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.outermost-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    /* border: 1px solid red; */
+    /* padding: 10px; */
+}
+
+.navbar-container {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    /* border: 1px solid blue; */
+    width: 100%;
+    background-color: #111;
+    padding: .5em;
+}
+
+.nav-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: column nowrap;
+    /* border: 2px solid green; */
+    height: 65px;
+    width: 65px;
+    text-align: center;
+    padding: .3em;
+    background-color: #333;
+}
+
+.nav-button-label {
+    /* border: 1px solid yellow; */
+    width: 100%;
+    text-transform: uppercase;
+    background-color: #222;
+}
+
+.nav-button-icon {
+    /* border: 1px solid orange; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #222;
+}
+
+.song-list-item {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    /* border: 2px dotted green; */
+    width: 100%;
+    margin-bottom: .5em;
+    padding: .5em .7em .6em .7em;
+    border-radius: 1em;
+    background-color: #444;
+}
+
+.song-list-item-info {
+    /* border: 2px dotted orange; */
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.song-list-item-actions {
+    /* border: 2px dotted yellow; */
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.song-list-item-title {
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
+.song-list-item-album {
+    font-size: 1.3em;
+}
+
+.song-list-item-artist {
+    font-size: 1.3em;
+}
+
+.song-list-item-action-button {
+    /* border: 2px solid blue; */
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/* LYRICS SCROLLER PAGE STYLES */
+.song-title {
+    border: red 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    width: 100%;
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: .0;
+}
+
+.song-subtitle {
+    border: blue 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+    width: 100%;
+    font-size: 2em;
+    margin-bottom: .0;
+}
+
+.song-album {
+    border: green 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+    width: 100%;
+    font-size: 1em;
+    margin-bottom: .5em;
+}
+
+.lyrics-outer-container {
+    border: orange 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    font-size: 2em;
+    text-align: left;
+    width: 100%;
+}

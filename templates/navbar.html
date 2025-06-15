@@ -1,0 +1,34 @@
+    <a href="/">
+        <div class="nav-button">
+            <div class="nav-button-label">Home</div>
+            <div class="nav-button-icon"><i class="material-icons">home</i></div>            
+        </div>
+    </a>
+
+    <a href="{{ url_for('songs.songs') }}">
+        <div class="nav-button">
+            <div class="nav-button-label">Songs</div>
+            <div class="nav-button-icon"><i class="material-icons">music_note</i></div>            
+        </div>
+    </a>
+
+    <a href="{{ url_for('sets.sets') }}">
+        <div class="nav-button">
+            <div class="nav-button-label">Sets</div>
+            <div class="nav-button-icon"><i class="material-icons">library_music</i></div>            
+        </div>
+    </a>
+
+    <a href="{{ url_for('song_create.song_create') }}">
+        <div class="nav-button">
+            <div class="nav-button-label">Create</div>
+            <div class="nav-button-icon"><i class="material-icons">add_circle</i></div>            
+        </div>
+    </a>
+
+    <a href="{{ url_for('search.search') }}">
+        <div class="nav-button">
+            <div class="nav-button-label">Search</div>
+            <div class="nav-button-icon"><i class="material-icons">search</i></div>            
+        </div>
+    </a>

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ page_title or "User Create" }}</h1>
+<p>You did it!</p>
+<p>Title: {{ title }}</p>
+<p>Subtitle: {{ subtitle }}</p>
+<p>Artist: {{ artist }}</p>
+<p>Album: {{ album }}</p>
+<p>Genre: {{ genre }}</p>
+<p>Year: {{ year }}</p>
+<p>Owner ID: {{ owner_id }}</p>
+<p>Lyrics: {{ lyrics }}</p>
+<p>Created: {{ created_at }}</p>
+<p>Updated: {{ updated_at }}</p>
+
+
+
+{% endblock %}
