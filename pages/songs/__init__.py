@@ -24,11 +24,14 @@ def songs():
     song_quantity = len(songs)
 
     app.config['temp_user_id'] = temp_user_id
+    app.config['temp_username'] = temp_username
     
     return render_template('songs.html',
                            title="Songs",
                            data=songs,
                            song_quantity=song_quantity,
                            current_sort=sort,
+                           temp_user_id=temp_user_id,
+                           temp_username=temp_username,
                            user_id=temp_user_id,
                            username=temp_username)

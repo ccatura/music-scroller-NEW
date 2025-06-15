@@ -9,5 +9,5 @@ song_create_bp = Blueprint('song_create', __name__, template_folder='templates')
 @song_create_bp.route('/song_create') #this is the route we will see this template on
 def song_create():
     temp_user_id = current_app.config['temp_user_id']
-    return render_template('song_create.html', title="Create Song", temp_user_id=temp_user_id)
+    return render_template('song_create.html', title="Create Song", temp_user_id=temp_user_id, temp_username=current_app.config['temp_username'])
 

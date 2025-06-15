@@ -20,6 +20,7 @@ def song_create_commit():
         updated_at = datetime.utcnow()
 
         temp_user_id = current_app.config['temp_user_id']
+        temp_username = current_app.config['temp_username']
 
         song = Song(
             title = title,
@@ -37,6 +38,8 @@ def song_create_commit():
     db.session.add(song)
     db.session.commit()
     # return "Song created!"
+
+    temp_user_id = current_app.config['temp_user_id']
     return render_template(
         'song_create_commit.html',
         page_title="Commit Song",
@@ -47,7 +50,7 @@ def song_create_commit():
         genre=genre,
         year=year,
         lyrics=lyrics,
-        owner_id=temp_user_id,
+        user_id=temp_user_id,
         created_at=created_at,
         updated_at=updated_at
         )
