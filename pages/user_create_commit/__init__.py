@@ -12,6 +12,7 @@ def user_create_commit():
         username = request.form.get('username')
         email = request.form.get('email')
         password = request.form.get('password')
+        temp_user_id = request.form.get('temp_user_id')
         created_at = datetime.utcnow()
         updated_at = datetime.utcnow()
 
@@ -26,5 +27,11 @@ def user_create_commit():
     db.session.add(user)
     db.session.commit()
     # return "User created!"
-    return render_template('user_create_commit.html', title="Commit User", username=username, email=email, password=password, created_at=created_at, updated_at=updated_at)
+    return render_template('user_create_commit.html',
+                           title="Commit User",
+                           username=username,
+                           email=email,
+                           password=password,
+                           created_at=created_at,
+                           updated_at=updated_at)
 

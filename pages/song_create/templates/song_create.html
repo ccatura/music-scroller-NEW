@@ -2,7 +2,6 @@
 
 {% block content %}
 <h1>{{ title or "User Create" }}</h1>
-<p>Just some extra information.</p>
 <form action="{{ url_for('song_create_commit.song_create_commit') }}" method="post">
     <div>
         Name<br>
@@ -30,7 +29,7 @@
     </div>
         <div>
         Lyrics<br>
-        <textarea name="lyrics" placeholder="Enter lyrics"></textarea>
+        <textarea name="lyrics" placeholder="Enter lyrics" rows="30" cols="50"></textarea>
     </div>
     <div>
         ID = {{ temp_user_id }}<br>

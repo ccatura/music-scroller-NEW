@@ -2,7 +2,12 @@
 
 {% block content %}
 <h1>{{ title or "Home Page" }}</h1>
-<p><a href="{{ url_for('user.user') }}">Edit User</a></p>
-<p><a href="{{ url_for('user_create.user_create') }}">Create User</a></p>
-<p><a href="/">Login As Charlie</a></p>
+<h2><a href="{{ url_for('user_create.user_create') }}">Create User</a></h2>
+
+{% for item in data %}
+    <h1><a href="{{ url_for('songs.songs', user_id=item.id, username=item.username) }}">Login As {{ item.username }}</a></h1>
+{% endfor %}
+
+
+
 {% endblock %}

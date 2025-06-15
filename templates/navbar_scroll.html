@@ -1,6 +1,43 @@
-    <a href="/">
+
+
+<div class="nav-button" id="play-button">
+        <div class="nav-button-label">play</div>
+        <div class="nav-button-icon label-stopped" id="play-button-icon"><i class="material-icons">play_circle</i></div>
+        <div class="nav-button-icon label-scrolling hidden-div" id="pause-button-icon"><i class="material-icons">pause_circle</i></div>            
+    </div>
+
+    <div class="group-button">
+        <div class="nav-button" id="slower-button">
+            <div class="nav-button-label">slower</div>
+            <div class="nav-button-icon"><i class="material-icons">do_not_disturb_on</i></div>            
+        </div>
+        <div class="nav-button" id="faster-button">
+            <div class="nav-button-label">faster</div>
+            <div class="nav-button-icon"><i class="material-icons">add_circle</i></div>            
+        </div>
         <div class="nav-button">
-            <div class="nav-button-label">Home</div>
-            <div class="nav-button-icon"><i class="material-icons">home</i></div>            
+            <div class="nav-button-label">speed</div>
+            <div class="nav-button-icon" id="scroll-speed">10</div>            
+        </div>
+    </div>
+
+    <div class="group-button">
+        <div class="nav-button" id="smaller-button">
+            <div class="nav-button-label">smaller</div>
+            <div class="nav-button-icon"><i class="material-icons">do_not_disturb_on</i></div>            
+        </div>
+        <div class="nav-button" id="larger-button">
+            <div class="nav-button-label">larger</div>
+            <div class="nav-button-icon"><i class="material-icons">add_circle</i></div>            
+        </div>
+        <div class="nav-button">
+            <div class="nav-button-label">size</div>
+            <div class="nav-button-icon" id="lyrics-size">30</div>            
+        </div>
+    </div>
+    <a href="{{ url_for('songs.songs', user_id=user_id, username=username) }}">
+        <div class="nav-button">
+            <div class="nav-button-label">Songs</div>
+            <div class="nav-button-icon"><i class="material-icons">music_note</i></div>            
         </div>
     </a>
