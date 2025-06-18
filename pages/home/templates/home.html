@@ -5,7 +5,8 @@
 <h2><a href="{{ url_for('user_create.user_create') }}">Create User</a></h2>
 
 {% for item in data %}
-    <h1><a href="{{ url_for('songs.songs', user_id=item.id, username=item.username) }}">Login As {{ item.username }}</a></h1>
+    <h1><a href="{{ url_for('songs.songs', user_id=item.id, username=item.username) }}">Login As {{ item.username }} </a>
+    <a href="{{ url_for('user_delete.user_delete', user_id=item.id) }}"> [X]</a></h1>
 {% endfor %}
 
 

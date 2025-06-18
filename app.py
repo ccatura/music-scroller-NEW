@@ -29,10 +29,12 @@ from pages.sets                 import sets_bp
 from pages.song                 import song_bp
 from pages.song_create          import song_create_bp
 from pages.song_create_commit   import song_create_commit_bp
+from pages.song_delete          import song_delete_bp
 from pages.songs                import songs_bp
 from pages.user                 import user_bp
 from pages.user_create          import user_create_bp
 from pages.user_create_commit   import user_create_commit_bp
+from pages.user_delete          import user_delete_bp
 
 app.register_blueprint(create_bp)
 app.register_blueprint(home_bp)
@@ -41,10 +43,12 @@ app.register_blueprint(sets_bp)
 app.register_blueprint(song_bp)
 app.register_blueprint(song_create_bp)
 app.register_blueprint(song_create_commit_bp)
+app.register_blueprint(song_delete_bp)
 app.register_blueprint(songs_bp)
 app.register_blueprint(user_bp)
 app.register_blueprint(user_create_bp)
 app.register_blueprint(user_create_commit_bp)
+app.register_blueprint(user_delete_bp)
 
 #Globals
 app.config['temp_user_id'] = 19

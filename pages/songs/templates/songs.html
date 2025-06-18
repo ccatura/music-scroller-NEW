@@ -25,7 +25,7 @@
         </a>
         <div class="song-list-item-actions">
           <div class="song-list-item-action-button">
-            <a href="#">Delete Song</a>
+            <a href="{{ url_for('song_delete.song_delete', song_id=item.id) }}">Delete Song</a>
           </div>
           <div class="song-list-item-action-button">
             Add To: &nbsp;
